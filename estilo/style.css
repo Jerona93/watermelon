@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboot", sans-serif;
+  text-decoration: none;
+  /* overflow-x: hidden; */
+}
+nav {
+  width: 100%;
+  height: 48px;
+  background: #54a7ceee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 0 40px;
+}
+nav ul li a {
+  font-weight: 300;
+  color: #666666;
+  transition: 600ms;
+}
+nav ul li a:hover {
+  color: #f5f5f7;
+}
+.navv {
+  padding-top: 10px;
+}
+
+/*--- section welcome ---*/
+.welcome {
+  width: 100%;
+  height: 500px;
+  background-image: url("https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/thai-aos-en-banner-hero-20160202?wid=1440&hei=689&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+/*--- section product ---*/
+.product-mac,
+.product-iphone,
+.product-watch,
+.product-ipad {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  cursor: pointer;
+}
+.product-mac h2,
+.product-iphone h2,
+.product-watch h2,
+.product-ipad h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.container {
+  width: 1070px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*--------image slider----------*/
+#container2 {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+.slider {
+  width: 500%;
+  position: relative;
+  animation: animate 10s linear infinite;
+}
+.slide {
+  width: 20%;
+  position: relative;
+  float: left;
+  height: 100vh;
+  background-size: cover;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 6em;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.slide:nth-child(1) {
+  background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-pro-segment-2019?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916135)
+    no-repeat center center;
+}
+.slide:nth-child(2) {
+  background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-series-5-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567038391208)
+    no-repeat center center;
+}
+.slide:nth-child(3) {
+  background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-11-pro-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567201566801)
+    no-repeat center center;
+}
+.slide:nth-child(4) {
+  background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916082)
+    no-repeat center center;
+}
+.slide:nth-child(5) {
+  background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-apple-tv4k-201709?wid=400&hei=300&fmt=png-alpha&.v=1504891668090)
+    no-repeat center center;
+}
+@keyframes animate {
+  0% {
+    left: 0;
+  }
+  16% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  36% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  56% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  76% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+  96% {
+    left: -400%;
+  }
+  10% {
+    left: 0;
+  }
+}
+@media screen and(max-width:768px) {
+  .menu ul li {
+    text-align: center;
+    margin: 15px auto;
+  }
+}
+
+/*--------image slider FIN----------*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+.grid-product {
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.grid-product:hover {
+  background: #e1e1e1;
+}
+.grid-product img {
+  width: 300px;
+}
+.grid-detail {
+  margin: 20px 0;
+  text-align: center;
+}
+.grid-detail p:last-child {
+  transition: 0.5s;
+  margin-top: 10px;
+}
+.grid-product:hover > .grid-detail p:last-child {
+  color: #3498db;
+}
+
+/*-------*/
+.grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.grid-product-full {
+  background: #f1f1f1;
+  grid-column: span 3;
+  display: flex;
+  position: relative;
+}
+.grid-detail-sum {
+  position: absolute;
+  top: 35%;
+  right: 12%;
+  text-align: center;
+}
+.grid-detail-sum h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.grid-detail-sum p {
+  margin: 20px 0;
+}
+.grid-detail-sum a {
+  color: rgb(51, 152, 219);
+}
+.grid-detail-sum a:hover {
+  text-decoration: underline;
+}
+
+img:hover{ 
+  -webkit-transform: scale(1);
+  transform: scale(2)
+}
+
+/*--- footer ---*/
+footer {
+  width: 100%;
+  height: 500px;
+  margin-top: 12%;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-main {
+  width: 1070px;
+}
+
+
+.footer-ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-ul ul {
+  list-style: none;
+}
+.footer-ul ul li {
+  margin: 7px 0;
+}
+.footer-ul ul li h4 {
+  color: #34495e;
+  font-size: 0.7rem;
+}
+.footer-ul ul li a {
+  color: #7f8c8d;
+  font-size: 0.7rem;
+}
+.footer-ul ul li a:hover {
+  text-decoration: underline;
+}
+#mt {
+  padding-top: 30px;
+}
+.footer-contact {
+  border-bottom: 1px solid #bdc3c7;
+  padding: 12px 0;
+  margin: 10px 0;
+  color: #7f8c8d;
+  font-size: 0.7rem;
+}
+.footer-contact a {
+  color: #3498db;
+}
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+.footer-copyright {
+  color: #7f8c8d;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copyright ul {
+  display: flex;
+  list-style: none;
+  width: auto;
+}
+.footer-copyright ul li {
+  margin: 0 10px;
+}
+.footer-copyright ul li a {
+  color: #7f8c8d;
+}
+.footer-copyright ul li a:hover {
+  text-decoration: underline;
+}
+.vr {
+  height: 15px;
+  width: 1px;
+  background: #bdc3c7;
+}
+.footer-lang {
+  display: flex;
+}
+.footer-lang p {
+  margin: 0 10px;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+}
+.circle img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
