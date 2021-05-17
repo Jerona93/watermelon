@@ -15,10 +15,10 @@
   <meta name="robots" content="noindex" />
   <link rel="shortcut icon" type="image/x-icon" href="images/icoWeb.ico" />
   <link rel="mask-icon" type="" href="images/watermelon2.svg" color="#111" />
-  <!-- BOOTSTRAP -->
+  <!-- BOOTSTRAP
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
   <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
@@ -33,13 +33,13 @@
         <a href="index.php"><i class="fab fa-f368"></i><img src="images/watermelon.png" style="width: 40px" /></a>
       </li>
 
-      <li class="navv"><a href="#">Mac</a></li>
-      <li class="navv"><a href="#">iPad</a></li>
-      <li class="navv"><a href="#">iPhone</a></li>
-      <li class="navv"><a href="#">Watch</a></li>
-      <li class="navv"><a href="#">TV</a></li>
-      <li class="navv"><a href="#">Music</a></li>
-      <li class="navv"><a href="#">Support</a></li>
+      <li class="navv"><a href="#product-Mac">Mac</a></li>
+      <li class="navv"><a href="#product-iPad">iPad</a></li>
+      <li class="navv"><a href="#product-iPhone">iPhone</a></li>
+      <li class="navv"><a href="#product-Watch">Watch</a></li>
+      <li class="navv"><a href="#product-TV">TV</a></li>
+      <li class="navv"><a href="#product-Music">Music</a></li>
+      <li class="navv"><a href="#product-Support">Support</a></li>
       <li class="navv">
         <a href="#"><i class="fas fa-search"></i></a>
       </li>
@@ -53,8 +53,8 @@
   </nav>
 </header>
 
-<body>
-<div class="container">
+<body style="overflow-x: hidden;">
+<!-- <div class="container"> -->
 
   <!-- <section class="welcome">
       <h1>Shop for your favorite WaterMelon products.</h1>
@@ -80,12 +80,12 @@
     </div>
   </div>
 
-  <section class="product-mac">
-    <div class="container">
+  <section class="product-mac" id="product-mac">
+    <div class="container" >
       <h2>Mac</h2>
       <div class="grid">
         <div class="grid-product">
-          <img src="images/droneInspire.png" />
+          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916082" />
           <div class="grid-detail">
             <p>MacBook Air</p>
             <p>From 35,000 €</p>
@@ -138,8 +138,8 @@
     <!--end container-->
   </section>
 
-  <section class="product-iphone">
-    <div class="container">
+  <section class="product-iphone" id="product-iphone">
+    <div class="container" >
       <h2>iPhone</h2>
       <div class="grid">
         <div class="grid-product">
@@ -179,7 +179,7 @@
     <!--end container-->
   </section>
 
-  <section class="product-watch">
+  <section class="product-watch" id="product-watch">
     <div class="container">
       <h2>Watch</h2>
       <div class="grid">
@@ -229,7 +229,7 @@
     <!--end container-->
   </section>
 
-  <section class="product-ipad">
+  <section class="product-ipad" id="product-ipad">
     <div class="container">
       <h2>DJI and Apple TV</h2>
       <div class="grid-full">
@@ -388,7 +388,7 @@
       </div>
     </div>
   </footer>
-</div>
+<!-- </div> -->
 </body>
 
 </html>
