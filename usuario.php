@@ -50,19 +50,3 @@
 }
 
 ?>
-
-<!--
-    function buscarUsuario($usuario){
-            //la construimos
-            $sql="SELECT * FROM usuario WHERE usuario='".$usuario."'";
-            //Hacemos la consulta
-            $resultado=$this->realizarConsulta($sql);
-            if($resultado!=false){
-                return $resultado->fetch_assoc();
-            }else{
-                return null;
-            }
-        }else{
-            return null;
-        }
--->

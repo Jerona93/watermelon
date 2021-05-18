@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap");
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +11,15 @@
   text-decoration: none;
   /* overflow-x: hidden; */
 }
+h2 {
+  margin: 20px;
+  font-family: Garamond;
+}
+.descrip {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 nav {
   width: 100%;
   height: 48px;
@@ -36,7 +48,24 @@ nav ul li a:hover {
 .navv {
   padding-top: 10px;
 }
-
+.bcarrito{
+  margin-top: 100px;
+}
+.botones {
+  margin: 10px;
+  background-color: rgb(175, 233, 255);
+  border-radius: 10px;
+  border-color: black;
+  text-align: center;
+}
+table {
+  border: solid;
+  width:300px;
+  background-color: white;
+  text-align: center;
+  border-collapse: collapse;
+  border-radius: 20px;
+}
 /*--- section welcome ---*/
 .welcome {
   width: 100%;
@@ -100,18 +129,7 @@ nav ul li a:hover {
   height: 100vh;
   background-size: cover;
 }
-h1 {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  font-size: 6em;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-}
+
 .slide:nth-child(1) {
   background: url(https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-pro-segment-2019?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916135)
     no-repeat center center;
@@ -238,11 +256,15 @@ h1 {
 .grid-detail-sum a:hover {
   text-decoration: underline;
 }
+.imgsum:hover {
+  -webkit-transform: scale(1);
+  transform: scale(2);
+}
 
-img:hover{ 
+/* img:hover{ 
   -webkit-transform: scale(1);
   transform: scale(2)
-}
+} */
 
 /*--- footer ---*/
 footer {
@@ -257,7 +279,6 @@ footer {
 .footer-main {
   width: 1070px;
 }
-
 
 .footer-ul {
   display: flex;
@@ -349,3 +370,118 @@ footer {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
+
+/* PARTE CARRITO */
+/* 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+.lighter-text {
+  color: #abb0be;
+}
+
+.main-color-text {
+  color: #6394f8;
+}
+
+
+
+.badge {
+  background-color: #6394f8;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.shopping-cart {
+  margin: 20px 0;
+  float: right;
+  background: white;
+  width: 320px;
+  position: relative;
+  border-radius: 3px;
+  padding: 20px;
+}
+.shopping-cart .shopping-cart-header {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 15px;
+}
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+  float: right;
+}
+.shopping-cart .shopping-cart-items {
+  padding-top: 20px;
+}
+.shopping-cart .shopping-cart-items li {
+  margin-bottom: 18px;
+}
+.shopping-cart .shopping-cart-items img {
+  float: left;
+  margin-right: 12px;
+}
+.shopping-cart .shopping-cart-items .item-name {
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+.shopping-cart .shopping-cart-items .item-price {
+  color: #6394f8;
+  margin-right: 8px;
+}
+.shopping-cart .shopping-cart-items .item-quantity {
+  color: #abb0be;
+}
+
+.shopping-cart:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.cart-icon {
+  color: #515783;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+
+.button {
+  background: #6394f8;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 25px 0 15px 0;
+}
+.button:hover {
+  background: #729ef9;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+

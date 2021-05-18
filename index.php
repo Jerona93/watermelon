@@ -1,3 +1,7 @@
+<?php
+include('bootstrap.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
   <link rel="StyleSheet" href="estilo/style.css" />
+  <link href="estilo/carrito.scss" />
 
-  <script src="mov/nav.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <title>WM</title>
 
@@ -25,6 +30,7 @@
   <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
   <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
   <script src="mov/nav.js"></script>
+  <script src="mov/carrito.js"></script>
 </head>
 <header>
   <nav>
@@ -39,12 +45,15 @@
       <li class="navv"><a href="#product-Watch">Watch</a></li>
       <li class="navv"><a href="#product-TV">TV</a></li>
       <li class="navv"><a href="#product-Music">Music</a></li>
-      <li class="navv"><a href="#product-Support">Support</a></li>
+      <li class="navv"><a href="#product-support">Support</a></li>
       <li class="navv">
         <a href="#"><i class="fas fa-search"></i></a>
       </li>
+
+      
+
       <li class="navv">
-        <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        <a href="carrito.php"><i class="fas fa-shopping-bag"></i></a>
       </li>
       <li class="navv">
         <a href="login.php"><i class="fa fa-user"></i></a>
@@ -54,13 +63,53 @@
 </header>
 
 <body style="overflow-x: hidden;">
-<!-- <div class="container"> -->
+
+  <!-- <div class="container3">
+    <div class="shopping-cart">
+      <div class="shopping-cart-header">
+        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+        <div class="shopping-cart-total">
+          <span class="lighter-text">Total:</span>
+          <span class="main-color-text">$2,229.97</span>
+        </div>
+      </div> -->
+  <!--end shopping-cart-header -->
+
+  <!-- <ul class="shopping-cart-items">
+        <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+          <span class="item-name">Sony DSC-RX100M III</span>
+          <span class="item-price">$849.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li> -->
+  <!-- 
+        <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+          <span class="item-name">KS Automatic Mechanic...</span>
+          <span class="item-price">$1,249.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li> -->
+
+  <!-- <li class="clearfix">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+          <span class="item-name">Kindle, 6" Glare-Free To...</span>
+          <span class="item-price">$129.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+      </ul>
+
+      <a href="#" class="button">Checkout</a>
+    </div> -->
+  <!--end shopping-cart -->
+  </div>
+  <!--end container -->
+  <!-- <div class="container"> -->
 
   <!-- <section class="welcome">
       <h1>Shop for your favorite WaterMelon products.</h1>
     </section>  -->
 
-    <div class="container2">
+  <div class="container2">
     <div class="slider">
       <div class="slide">
 
@@ -81,54 +130,56 @@
   </div>
 
   <section class="product-mac" id="product-mac">
-    <div class="container" >
+    <div class="container">
       <h2>Mac</h2>
       <div class="grid">
-        <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916082" />
+        <div class="grid-product ">
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916082" />
           <div class="grid-detail">
             <p>MacBook Air</p>
-            <p>From 35,000 €</p>
+            <p>Desde 35,000 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-pro-segment-2019?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916135" />
-          <div class="grid-detail">
-            <p>MacBook Pro</p>
-            <p>From 42,900 €</p>
-          </div>
+          <a href="mcbookpro.php">
+            <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-pro-segment-2019?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916135" />
+            <div class="grid-detail">
+              <p>MacBook Pro</p>
+              <p>Desde 42,900 €</p>
+            </div>
+          </a>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1570232081431" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1570232081431" />
           <div class="grid-detail">
             <p>iMac</p>
-            <p>From 37,900 €</p>
+            <p>Desde 37,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-pro-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1570231926191" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-pro-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1570231926191" />
           <div class="grid-detail">
             <p>iMac Pro</p>
-            <p>From 172,900 €</p>
+            <p>Desde 172,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-pro-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1524766968633" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-pro-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1524766968633" />
           <div class="grid-detail">
             <p>Mac Pro</p>
-            <p>From 114,900 €</p>
+            <p>Desde 114,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-mini-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1539466285370" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-mini-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1539466285370" />
           <div class="grid-detail">
             <p>Mac mini</p>
-            <p>From 27,900 €</p>
+            <p>Desde 27,900 €</p>
           </div>
         </div>
         <!--end grid-product-->
@@ -139,38 +190,38 @@
   </section>
 
   <section class="product-iphone" id="product-iphone">
-    <div class="container" >
+    <div class="container">
       <h2>iPhone</h2>
       <div class="grid">
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-11-pro-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567201566801" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-11-pro-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567201566801" />
           <div class="grid-detail">
             <p>iPhone 11 Pro</p>
-            <p>From 35,900 </p>
+            <p>Desde 35,900 </p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-11-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567201566851" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-11-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567201566851" />
           <div class="grid-detail">
             <p>iPhone 11</p>
-            <p>From 24,900 €</p>
+            <p>Desde 24,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-xr-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535393884526" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-xr-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1535393884526" />
           <div class="grid-detail">
             <p>iPhone XR</p>
-            <p>From 21,900 €</p>
+            <p>Desde 21,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-iphone-8-201709?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1504891668190" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-iphone-8-201709?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1504891668190" />
           <div class="grid-detail">
             <p>iPhone 8</p>
-            <p>From 15,900 €</p>
+            <p>Desde 15,900 €</p>
           </div>
         </div>
       </div>
@@ -184,42 +235,42 @@
       <h2>Watch</h2>
       <div class="grid">
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-series-5-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567038391208" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-series-5-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567038391208" />
           <div class="grid-detail">
             <p>Apple Watch Series 5</p>
-            <p>From 13,400 €</p>
+            <p>Desde 13,400 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-nike-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567202843775" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-nike-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567202843775" />
           <div class="grid-detail">
             <p>Apple Watch Nike</p>
-            <p>From 13,400 €</p>
+            <p>Desde 13,400 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-hermes-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1568373934272" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-hermes-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1568373934272" />
           <div class="grid-detail">
             <p>Apple Watch Hermes</p>
-            <p>From 40,900 €</p>
+            <p>Desde 40,900 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-edition-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1568066151825" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-edition-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1568066151825" />
           <div class="grid-detail">
             <p>Apple Watch Edition Series 5</p>
-            <p>From 25,400 €</p>
+            <p>Desde 25,400 €</p>
           </div>
         </div>
 
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-series-3-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567038391348" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/apple-watch-series-3-segment-201909?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1567038391348" />
           <div class="grid-detail">
             <p>Apple Watch Series 3</p>
-            <p>From 6,400 €</p>
+            <p>Desde 6,400 €</p>
           </div>
         </div>
         <!--end grid-product-->
@@ -234,28 +285,28 @@
       <h2>DJI and Apple TV</h2>
       <div class="grid-full">
         <div class="grid-product">
-          <img src="images/droneInspire.png" />
+          <img class="imgsum" src="images/droneInspire.png" />
           <div class="grid-detail">
             <p>Drone DjI</p>
             <p>Form 6,900 €</p>
           </div>
         </div>
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-apple-tv4k-201709?wid=400&hei=300&fmt=png-alpha&.v=1504891668090" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-apple-tv4k-201709?wid=400&hei=300&fmt=png-alpha&.v=1504891668090" />
           <div class="grid-detail">
             <p>Apple TV 4K</p>
             <p>Form 7,528 €</p>
           </div>
         </div>
         <div class="grid-product">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-apple-tv4k-201709?wid=400&hei=300&fmt=png-alpha&.v=1504891668090" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/segment-hero-apple-tv4k-201709?wid=400&hei=300&fmt=png-alpha&.v=1504891668090" />
           <div class="grid-detail">
             <p>Apple TV HD</p>
             <p>Form 6,168 €</p>
           </div>
         </div>
         <div class="grid-product-full">
-          <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/smb-accessories-201908?wid=1070&hei=480&fmt=png-alpha&.v=1563990869846" />
+          <img class="imgsum" src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/smb-accessories-201908?wid=1070&hei=480&fmt=png-alpha&.v=1563990869846" />
           <div class="grid-detail-sum">
             <h2>Accessories</h2>
             <p>get things done in style.</p>
@@ -379,7 +430,7 @@
 
         <div class="footer-lang">
           <div class="circle">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/21ebY7rg4aL._AC_.jpg" />
+            <img  src="https://images-na.ssl-images-amazon.com/images/I/21ebY7rg4aL._AC_.jpg" />
           </div>
           <p>ไทย</p>
           <div class="vr"></div>
@@ -388,7 +439,7 @@
       </div>
     </div>
   </footer>
-<!-- </div> -->
+  <!-- </div> -->
 </body>
 
 </html>

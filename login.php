@@ -79,12 +79,9 @@
                 <input id="pass" type="password" name="pass0" class="input" data-type="password" placeholder="Contraseña..">
               </div>
 
+             
               <div class="group">
-                <input id="check" type="checkbox" class="check" checked>
-                <label for="check"><span class="icon"></span> Keep me Signed in</label>
-              </div>
-              <div class="group">
-                <input type="submit" class="button" value="Sign In">
+                <input type="submit" class="button" value="Sign In" onclick=" location.href='www.google.com' ">
               </div>
               <div class="hr"></div>
               <div class="foot-lnk">
@@ -99,7 +96,7 @@
                 <input id="fname" type="text" name="nombre" class="input" placeholder="Nombre..">
               </div>
               <div class="group">
-                <label for="user" class="label">Nombre</label>
+                <label for="user" class="label">Usuario</label>
                 <input id="user" type="text" name="usuario" class="input" placeholder="Usuario..">
               </div>
               <div class="group">
