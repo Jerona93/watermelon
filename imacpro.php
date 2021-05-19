@@ -44,7 +44,7 @@ include('bootstrap.php');
             <li class="navv"><a href="<?php echo BASE_URL; ?>#productwatch">Watch</a></li>
             <li class="navv"><a href="<?php echo BASE_URL; ?>#productoipad">DJI</a></li>
             <li class="navv"><a href="<?php echo BASE_URL; ?>#product-support">Conócenos</a></li>
-
+           
             <li class="navv">
                 <a href="carrito.php"><i class="fas fa-shopping-bag"></i></a>
             </li>
@@ -59,15 +59,15 @@ include('bootstrap.php');
 
     <div>
         <div class="grid-detail">
-            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-pro-segment-2019?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1573580916135" />
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-pro-segment?wid=800&hei=600&fmt=png-alpha&qlt=80&.v=1570231926191" />
 
-            <h2>MacBook Pro</h2>
+            <h2>iMac Pro</h2>
             <div class="descrip">
-                <p>El MacBook Pro de 13 pulgadas y el chip M1 se unen para ofrecer un rendimiento brutal. La CPU es hasta 2,8 veces más potente y los gráficos multiplican hasta por cinco su velocidad.
-                    El Neural Engine más avanzado acelera hasta once veces el aprendizaje automático. Y la autonomía llega a las 20 horas, lo nunca visto en un Mac. Por fuera sigue siendo nuestro portátil profesional más popular.
-                    Pero lo que hay dentro va a cambiarlo todo. Agárrate.
-                <form method="post" action="carrito.php?nombre=MacBook Pro&precio=1500">
-                    <div class="product-price">1,500 €</div>
+                <p>El iMac de 27 pulgadas viene con herramientas y apps muy potentes para que lleves tus ideas hasta donde nunca imaginaste.
+                    Sus procesadores y gráficos ultrarrápidos, su increíble memoria y el almacenamiento flash son capaces de completar cualquier tarea en un visto y no visto.
+                    Y con las potentes prestaciones de audio y vídeo y una pantalla Retina 5K deslumbrante, todo lo que hagas estará en otra dimensión.
+                <form method="post" action="carrito.php?nombre=iMac Pro&precio=2300">
+                    <div class="product-price">2,300 €</div>
                     <div><input type="text" name="cantidad" value="1" /><input type="submit" value="Añadir al carro" class="btnAddAction" /></div>
                 </form>
             </div>

@@ -1,3 +1,6 @@
+<?php
+include('bootstrap.php');
+?>
 <!DOCTYPE html>
 <html lang="es-ES">
 
@@ -7,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
 	<link rel="StyleSheet" href="estilo/style.css" />
-	<link href="estilo/carrito.scss" />
+	<link rel="StyleSheet" href="estilo/buttons.css" />
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -16,10 +19,6 @@
 	<meta name="robots" content="noindex" />
 	<link rel="shortcut icon" type="image/x-icon" href="images/icoWeb.ico" />
 	<link rel="mask-icon" type="" href="images/watermelon2.svg" color="#111" />
-	<!-- BOOTSTRAP
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 	<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
@@ -37,23 +36,14 @@
 				<a href="index.php"><i class="fab fa-f368"></i><img src="images/watermelon.png" style="width: 40px" /></a>
 			</li>
 
-			<li class="navv"><a href="#product-Mac">Mac</a></li>
-			<li class="navv"><a href="#product-iPad">iPad</a></li>
-			<li class="navv"><a href="#product-iPhone">iPhone</a></li>
-			<li class="navv"><a href="#product-Watch">Watch</a></li>
-			<li class="navv"><a href="#product-TV">TV</a></li>
-			<li class="navv"><a href="#product-Music">Music</a></li>
-			<li class="navv"><a href="#product-support">Support</a></li>
+			<li class="navv"><a href="<?php echo BASE_URL; ?>#productomac">Mac</a></li>
+			<li class="navv"><a href="<?php echo BASE_URL; ?>#productoiphone">iPhone</a></li>
+			<li class="navv"><a href="<?php echo BASE_URL; ?>#productwatch">Watch</a></li>
+			<li class="navv"><a href="<?php echo BASE_URL; ?>#productoipad">DJI</a></li>
+			<li class="navv"><a href="<?php echo BASE_URL; ?>#product-support">Conócenos</a></li>
+			
 			<li class="navv">
-				<a href="#"><i class="fas fa-search"></i></a>
-			</li>
-
-			<li class="navv">
-				<a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a>
-			</li>
-
-			<li class="navv">
-				<a href="index2.php"><i class="fas fa-shopping-bag"></i></a>
+				<a href="carrito.php"><i class="fas fa-shopping-bag"></i></a>
 			</li>
 			<li class="navv">
 				<a href="login.php"><i class="fa fa-user"></i></a>
@@ -127,7 +117,7 @@
 
 		//Imprimimos el precio total
 
-		
+
 
 
 
@@ -144,7 +134,7 @@
 			<?php
 			if ($fPrecioTotal > 0) {
 				$sHTML .= '<br>------------------<br>Precio total: ' . $fPrecioTotal . ' €';
-			} 
+			}
 
 			echo $sHTML;
 
@@ -156,16 +146,16 @@
 
 
 	<div class="botones">
-		<button onclick="location.href='carrito.php?vaciar=1'" type="button">Vaciar el carrito</button>
+		<button class="fill" onclick="location.href='carrito.php?vaciar=1'" type="button">Vaciar el carrito</button>
 	</div>
 
 
 	<div class="botones">
-		<button onclick="location.href='index.php'" type="button">Volver al Menu</button>
+		<button class="pulse" onclick="location.href='index.php'" type="button">Volver al Menu</button>
 	</div>
 
 
-	<br><br>
+
 
 	<!-- CARRITO NUEVO -->
 
