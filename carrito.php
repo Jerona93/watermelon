@@ -30,137 +30,104 @@ include('bootstrap.php');
 
 </head>
 <header style="padding-top: 1px;">
-	<nav>
-		<ul>
-			<li>
-				<a href="index.php"><i class="fab fa-f368"></i><img src="images/watermelon.png" style="width: 40px" /></a>
-			</li>
-
-			<li class="navv"><a href="<?php echo BASE_URL; ?>#productomac">Mac</a></li>
-			<li class="navv"><a href="<?php echo BASE_URL; ?>#productoiphone">iPhone</a></li>
-			<li class="navv"><a href="<?php echo BASE_URL; ?>#productwatch">Watch</a></li>
-			<li class="navv"><a href="<?php echo BASE_URL; ?>#productoipad">DJI</a></li>
-			<li class="navv"><a href="<?php echo BASE_URL; ?>#product-support">Conócenos</a></li>
-			
-			<li class="navv">
-				<a href="carrito.php"><i class="fas fa-shopping-bag"></i></a>
-			</li>
-			<li class="navv">
-				<a href="login.php"><i class="fa fa-user"></i></a>
-			</li>
-		</ul>
-	</nav>
+	<?php echo navegador; ?>
 </header>
 
 <body>
-	<div class="bcarrito">
-		<?php
+	<div id="wrapper">
+		<div class="bcarrito">
+			<?php
 
-		$aCarrito = array();
-		$sHTML = '';
-		$fPrecioTotal = 0;
-		$existe = 0;
+			$aCarrito = array();
+			$sHTML = '';
+			$fPrecioTotal = 0;
+			$existe = 0;
 
-		//Vaciar
-		if (isset($_GET['vaciar'])) {
-			unset($_COOKIE['carrito']);
-			$sHTML .= '<h2>El carrito está vacio, !!ve a comprar algo!!</h2>';
-		}
+			//Vaciar
+			if (isset($_GET['vaciar'])) {
+				unset($_COOKIE['carrito']);
+				$sHTML .= '<h2>El carrito ya está vacio, !!ve a comprar algo!!</h2>';
+			}
 
-		//Productos anteriores
-		if (isset($_COOKIE['carrito'])) {
-			$aCarrito = unserialize($_COOKIE['carrito']);
-		}
+			//Productos anteriores
+			if (isset($_COOKIE['carrito'])) {
+				$aCarrito = unserialize($_COOKIE['carrito']);
+			}
 
-		//nuevo producto
-		if (isset($_GET['nombre']) && isset($_GET['precio'])) {
+			//nuevo producto
+			if (isset($_GET['nombre']) && isset($_GET['precio'])) {
 
+				for ($i = 0; $i < sizeof($aCarrito); $i++) {
+					if ($aCarrito[$i]['nombre'] == $_GET['nombre']) {
+						$aCarrito[$i]['cantidad'] = $aCarrito[$i]['cantidad'] + 1;
+						$existe = 1;
+					}
+				}
 
-			for ($i = 0; $i < sizeof($aCarrito); $i++) {
-				if ($aCarrito[$i]['nombre'] == $_GET['nombre']) {
-					$aCarrito[$i]['cantidad'] = $aCarrito[$i]['cantidad'] + 1;
-					$existe = 1;
+				if ($existe == 0) {
+					$iUltimaPos = count($aCarrito);
+					$aCarrito[$iUltimaPos]['nombre'] = $_GET['nombre'];
+					$aCarrito[$iUltimaPos]['precio'] = $_GET['precio'];
+					$aCarrito[$iUltimaPos]['cantidad'] = $_POST['cantidad'];
 				}
 			}
 
+			//cookie que dure un día
+			$iTemCad = time() + (86400);
+			setcookie('carrito', serialize($aCarrito), $iTemCad);
+
+			// contenido del array
+			$sHTML .= '<table border="1"; >';
+			$sHTML .= '<tr><td><b>Nombre</b></td><td><b>Precio</b></td><td><b>Cantidad</b></td></tr>';
 
 
-			if ($existe == 0) {
-				$iUltimaPos = count($aCarrito);
-				$aCarrito[$iUltimaPos]['nombre'] = $_GET['nombre'];
-				$aCarrito[$iUltimaPos]['precio'] = $_GET['precio'];
-				$aCarrito[$iUltimaPos]['cantidad'] = $_POST['cantidad'];
-			}
-		}
+			foreach ($aCarrito as $key => $value) {
+				$sHTML .= '<tr>';
+				// $sHTML .= '<td>' . $value['nombre'] . '</td><td>' . $value['precio'] * $value['cantidad'] . '</td><td>' . $value['cantidad']  . '</td>';
+				$sHTML .= '<td>' . $value['nombre'] . '</td><td>' . $value['cantidad']  . '</td>' . '</td><td>' . $value['precio'] * $value['cantidad'];
+				$sHTML .= '</tr>';
 
-		//cookie que dure un día
-		$iTemCad = time() + (86400);
-		setcookie('carrito', serialize($aCarrito), $iTemCad);
-
-
-
-		// contenido del array
-		$sHTML .= '<table border="1"; >';
-		$sHTML .= '<tr><td><b>Nombre</b></td><td><b>Precio</b></td><td><b>Cantidad</b></td></tr>';
-
-
-		foreach ($aCarrito as $key => $value) {
-			$sHTML .= '<tr>';
-			// $sHTML .= '<td>' . $value['nombre'] . '</td><td>' . $value['precio'] * $value['cantidad'] . '</td><td>' . $value['cantidad']  . '</td>';
-			$sHTML .= '<td>' . $value['nombre'] . '</td><td>' . $value['cantidad']  . '</td>' . '</td><td>' . $value['precio'] * $value['cantidad'];
-			$sHTML .= '</tr>';
-
-			$fPrecioTotal += $value['precio'] * $value['cantidad'];
-		}
-
-		$sHTML .= '</table>';
-
-		//Imprimimos el precio total
-
-
-
-
-
-
-		?>
-	</div>
-
-
-
-
-	<center>
-		<div>
-			<h2>Carrito </h2>
-			<?php
-			if ($fPrecioTotal > 0) {
-				$sHTML .= '<br>------------------<br>Precio total: ' . $fPrecioTotal . ' €';
+				$fPrecioTotal += $value['precio'] * $value['cantidad'];
 			}
 
-			echo $sHTML;
+			$sHTML .= '</table>';
 
 			?>
-
 		</div>
-	</center>
-	<br>
+
+		<center>
+			<div>
+				<h2>Carrito </h2>
+				<?php
+				if ($fPrecioTotal > 0) {
+					$sHTML .= '<br>------------------<br>Precio total: ' . $fPrecioTotal . ' €';
+				}
+
+				echo $sHTML;
+
+				?>
+
+			</div>
+		</center>
+		<br>
 
 
-	<div class="botones">
-		<button class="fill" onclick="location.href='carrito.php?vaciar=1'" type="button">Vaciar el carrito</button>
+		<div class="botones">
+			<button class="fill" onclick="location.href='carrito.php?vaciar=1'" type="button">Vaciar el carrito</button>
+		</div>
+
+
+		<div class="botones">
+			<button class="pulse" onclick="location.href='index.php'" type="button">Volver al Menu</button>
+		</div>
+
+
+
+
+		<!-- CARRITO NUEVO -->
+
+
 	</div>
-
-
-	<div class="botones">
-		<button class="pulse" onclick="location.href='index.php'" type="button">Volver al Menu</button>
-	</div>
-
-
-
-
-	<!-- CARRITO NUEVO -->
-
-
-
 </body>
 
 </html>

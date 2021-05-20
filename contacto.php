@@ -33,26 +33,7 @@ include('bootstrap.php');
     <script src="mov/carrito.js"></script>
 </head>
 <header style="padding-top: 0.1px;">
-    <nav>
-        <ul>
-            <li>
-                <a href="index.php"><i class="fab fa-f368"></i><img src="images/watermelon.png" style="width: 40px" /></a>
-            </li>
-
-            <li class="navv"><a href="<?php echo BASE_URL; ?>#productomac">Mac</a></li>
-            <li class="navv"><a href="<?php echo BASE_URL; ?>#productoiphone">iPhone</a></li>
-            <li class="navv"><a href="<?php echo BASE_URL; ?>#productwatch">Watch</a></li>
-            <li class="navv"><a href="<?php echo BASE_URL; ?>#productoipad">DJI</a></li>
-            <li class="navv"><a href="<?php echo BASE_URL; ?>#product-support">Conócenos</a></li>
-
-            <li class="navv">
-                <a href="carrito.php"><i class="fas fa-shopping-bag"></i></a>
-            </li>
-            <li class="navv">
-                <a href="login.php"><i class="fa fa-user"></i></a>
-            </li>
-        </ul>
-    </nav>
+<?php echo navegador; ?>
 </header>
 
 <body style="overflow-x: hidden;">
