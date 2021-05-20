@@ -63,12 +63,14 @@ nav ul li a:hover {
   text-align: center;
 }
 table {
-  border: solid;
-  width:300px;
-  background-color: white;
+  border: 2px solid;
+  width:600px;
+  background-color: #6aafcf5b;
   text-align: center;
-  border-collapse: collapse;
   border-radius: 20px;
+  border-spacing: 0px;
+  /* border-collapse:separate; */
+ 
 }
 /*--- section welcome ---*/
 .welcome {
@@ -273,7 +275,7 @@ table {
 /*--- footer ---*/
 footer {
   width: 100%;
-  height: 500px;
+  height: 100px;
   margin-top: 12%;
   background: #f1f1f1;
   display: flex;

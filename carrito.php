@@ -121,13 +121,9 @@ include('bootstrap.php');
 			<button class="pulse" onclick="location.href='index.php'" type="button">Volver al Menu</button>
 		</div>
 
-
-
-
-		<!-- CARRITO NUEVO -->
-
-
 	</div>
+
+	<!-- <?php //echo footer; ?> -->
 </body>
 
 </html>

@@ -37,6 +37,7 @@
                              echo "<p>Email: ".$usuarioReg["email"]."</p>";
                             //estoy probando esto
                             //echo "<br><center><a href=login.php>Ir a login</a></center>";
+                            echo "<a href=index.php>Volver al index</a><br>";
                             echo "<a href=cerrar.php>Cerrar sesión</a>";
                         }else if( $usuarioReg["usuario"]==null){
                             //usuario no insertado
@@ -62,7 +63,7 @@
                             echo  "<p>Usuario: ".$usuarioReg["usuario"]."</p>";
 
                             echo "<p>Email: ".$usuarioReg["email"]."</p>";
-
+                            echo "<a href=index.php>Volver al index</a>";
                             echo "<a href=cerrar.php>Cerrar sesión</a>";
                         }else{
                             echo "<h2>Las contraseñas no coinciden</h2><br>";
